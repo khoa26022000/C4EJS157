@@ -22,3 +22,53 @@ console.log(0 / 3);
 // 60 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 96 98 99 100
 
 // test commit
+
+///
+function kiemTraSoNguyenTo(n) {
+  if (n < 2) return console.log("Khong phai so nguyen to");
+
+  for (let index = 2; index < n; index++) {
+    let kq = n % index;
+    console.log(kq);
+    if (n % index == 0) {
+      return console.log("Khong phai");
+    }
+  }
+  return console.log("La so nguyen to");
+}
+kiemTraSoNguyenTo(1);
+
+// 🧩 Bài toán con thỏ của Fibonacci:
+// Giả sử:
+
+// Bắt đầu với 1 cặp thỏ (1 đực, 1 cái).
+
+// Mỗi tháng, một cặp thỏ trưởng thành sau 1 tháng.
+
+// Sau khi trưởng thành, mỗi cặp sinh ra 1 cặp thỏ con mỗi tháng.
+
+// Thỏ không chết.
+
+// Hỏi: Sau n tháng sẽ có bao nhiêu cặp thỏ?
+
+// sắp xếp mảng theo thứ tự tăng dần và giảm dần (có 2 cách dùng for hoặc thuộc tính của mảng)
+// swap
+function sortDes(arr) {
+  let length = arr.length;
+  for (let i = 0; i < length - 1; i++) {
+    for (let j = 0; j < length - i - 1; j++) {
+      console.log("i", arr[i]);
+      console.log("j", arr[j]);
+      if (arr[j] < arr[j + 1]) {
+        let temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+  }
+
+  console.log(arr);
+}
+let array = [2, 5, 3];
+array.sort;
+sortDes(array);
